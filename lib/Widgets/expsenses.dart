@@ -37,7 +37,7 @@ class _ExpsensesState extends State<Expsenses> {
           'EXPENSE TRACKER',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.purple,
+        backgroundColor: const Color(0xff7680AA),
         actions: [
           IconButton(
             onPressed: _openAddExpenseView,

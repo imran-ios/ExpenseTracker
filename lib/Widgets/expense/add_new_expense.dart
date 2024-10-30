@@ -23,6 +23,19 @@ class _AddNewExpenseState extends State<AddNewExpense> {
       padding: const EdgeInsets.all(16.0),
       child: Column(
         children: [
+          Row(
+            children: [
+              Spacer(),
+              IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(
+                    Icons.cancel,
+                    color: Colors.red,
+                  ))
+            ],
+          ),
           TextField(
             controller: _expenseTitleController,
             maxLength: 50,
@@ -35,7 +48,9 @@ class _AddNewExpenseState extends State<AddNewExpense> {
               label: Text("Enter Expense Amount"),
             ),
           ),
-          Text('data'),
+          const SizedBox(
+            height: 24,
+          ),
           ElevatedButton(
               onPressed: () {
                 print(_expenseTitleController.text);
